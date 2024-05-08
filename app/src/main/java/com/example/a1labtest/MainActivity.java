@@ -34,7 +34,35 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(v->{
             String s=edit1.getText().toString();
             String se=edit2.getText().toString();
-            textView.setText(s);
+            String fshape="Invalid Shape";
+            String fcolor="Invalid Color";
+            String ff;
+            if(s.equals("Square")){
+                Square square=new Square();
+                fshape=square.name+" "+square.area(4)+" "+square.perimeter(4);
+            }
+            else if(s.equals("Triangle")){
+                Triangle triangle=new Triangle();
+                fshape=triangle.name+" "+triangle.area(4,4)+" "+triangle.perimeter(4);
+            }
+            else if(s.equals("Circle")){
+                Circle circle=new Circle();
+                fshape=circle.name+" "+circle.area(4)+" "+circle.preimeter(4.0F);
+            }
+            if(se.equals("Blue")){
+                Blue blue=new Blue();
+                fcolor = blue.Showcolor();
+            }
+            else if(se.equals("Green")){
+                Green green=new Green();
+                fcolor = green.Showcolor();
+            }
+            else if(se.equals("Red")){
+                Red red=new Red();
+                fcolor =red.Showcolor();
+            }
+            ff=fcolor+" "+fshape;
+            textView.setText(ff);
         });
     }
 }

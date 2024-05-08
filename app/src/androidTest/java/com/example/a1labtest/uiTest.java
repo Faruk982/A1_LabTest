@@ -17,7 +17,7 @@ public class uiTest {
         Espresso.onView(ViewMatchers.withId(R.id.InputShape)).perform(ViewActions.typeText("Square"));
         Espresso.onView(ViewMatchers.withId(R.id.InputColor)).perform(ViewActions.typeText("Red"));
         Espresso.onView(ViewMatchers.withId(R.id.btn)).perform(ViewActions.click());
-        Espresso.onView(ViewMatchers.withId(R.id.ShowShape)).check(ViewAssertions.matches(ViewMatchers.withText("Square")));
+        Espresso.onView(ViewMatchers.withId(R.id.ShowShape)).check(ViewAssertions.matches(ViewMatchers.withText("Red Square 16.0 16.0")));
 
     }
 }
